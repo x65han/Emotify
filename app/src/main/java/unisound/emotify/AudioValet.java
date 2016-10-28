@@ -1,4 +1,4 @@
-package sideproject.uwaterloo.ca.emotone;
+package unisound.emotify;
 
 import android.media.MediaPlayer;
 

@@ -1,21 +1,18 @@
-package sideproject.uwaterloo.ca.emotone;
+package unisound.emotify;
 
-import android.app.Notification;
 import android.content.Context;
-import android.content.Intent;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.net.Uri;
-import android.os.Bundle;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
-import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.TextView;
+
+import unisound.emotify.MainActivity;
 
 /**
  * Created by Johnson on 2016-10-24.

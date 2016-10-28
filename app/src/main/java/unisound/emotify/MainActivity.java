@@ -1,17 +1,12 @@
-package sideproject.uwaterloo.ca.emotone;
+package unisound.emotify;
 
 import android.app.ActivityManager;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.app.IntentService;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.provider.Settings;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -25,17 +20,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(unisound.emotify.R.layout.activity_main);
+        enableService();
         // create Media
-        MediaPlayer positiveAudio = MediaPlayer.create(MainActivity.this, R.raw.positive);
-        MediaPlayer negativeAudio = MediaPlayer.create(MainActivity.this, R.raw.negative);
+        MediaPlayer positiveAudio = MediaPlayer.create(MainActivity.this, unisound.emotify.R.raw.positive);
+        MediaPlayer negativeAudio = MediaPlayer.create(MainActivity.this, unisound.emotify.R.raw.negative);
         AudioValet setupAM = new AudioValet(positiveAudio, negativeAudio);
         // run service
         startService(new Intent(this, NotificationManager.class));
         // Create UI Component
-        final TextView mtv = (TextView) findViewById(R.id.tv1);
+        final TextView mtv = (TextView) findViewById(unisound.emotify.R.id.tv1);
         mtv.setText("Service Status: " + isMyServiceRunning(NotificationManager.class));
-        CheckBox cb = (CheckBox) findViewById(R.id.cb1);
+        CheckBox cb = (CheckBox) findViewById(unisound.emotify.R.id.cb1);
         cb.setText("Enable Service");
         cb.setChecked(isMyServiceRunning(NotificationManager.class));
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
