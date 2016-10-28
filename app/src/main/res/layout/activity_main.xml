@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,13 +10,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@raw/app_internal_icon"
+        android:id="@+id/iv1"
+        android:layout_marginTop="65dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:maxWidth = "100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="52dp"
         android:id="@+id/tv1"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/iv1"
         android:layout_centerHorizontal="true" />
 
     <CheckBox
@@ -23,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cb1"
+        android:layout_marginTop="28dp"
         android:layout_below="@+id/tv1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

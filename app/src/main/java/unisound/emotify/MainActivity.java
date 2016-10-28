@@ -3,6 +3,7 @@ package unisound.emotify;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         // create Media
         MediaPlayer positiveAudio = MediaPlayer.create(MainActivity.this, unisound.emotify.R.raw.positive);
         MediaPlayer negativeAudio = MediaPlayer.create(MainActivity.this, unisound.emotify.R.raw.negative);
-        AudioValet setupAM = new AudioValet(positiveAudio, negativeAudio);
+        new AudioValet(positiveAudio, negativeAudio);
         // run service
         startService(new Intent(this, NotificationManager.class));
         // Create UI Component
