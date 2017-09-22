@@ -2,7 +2,6 @@
 - Predict the mood of the user based on the notification
 - Ring happy tone if the message will induce happy emotion
 - Else ring sad tone
-- Build during Engineering Hackathon - University of Waterloo, October 2016
 ## Inspiration
 
 After a very long day, we just hate to hear that mono-ringtone. Then the idea of a dynamic notification tone came across our mind. Why not let the phone app processes the notification and predicts whether the user wants to read this message or not?
